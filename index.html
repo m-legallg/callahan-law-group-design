@@ -90,6 +90,22 @@ input::placeholder,textarea::placeholder{color:#57534e;}
 .clg-hero__text span+span{margin-top:1vw;}
 .clg-hero__people{position:absolute;bottom:0;z-index:20;width:100%;display:flex;justify-content:center;pointer-events:none;will-change:transform;}
 .clg-hero__people img{height:80vh;object-fit:contain;object-position:bottom;filter:drop-shadow(0 20px 40px rgba(0,0,0,.8));}
+.clg-hero__people.has-split img{opacity:0;}
+.clg-hero__people.has-split::before,.clg-hero__people.has-split::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:var(--people-src);
+  background-repeat:no-repeat;
+  background-size:contain;
+  background-position:center bottom;
+  filter:drop-shadow(0 20px 40px rgba(0,0,0,.8));
+  opacity:0;
+  transition:transform 1.05s cubic-bezier(.16,1,.3,1),opacity .65s ease;
+}
+.clg-hero__people.has-split::before{clip-path:inset(0 50% 0 0);transform:translateX(-11vw);}
+.clg-hero__people.has-split::after{clip-path:inset(0 0 0 50%);transform:translateX(11vw);}
+.clg-hero__people.has-split.is-loaded::before,.clg-hero__people.has-split.is-loaded::after{transform:translateX(0);opacity:1;}
 .clg-hero__fade{position:absolute;bottom:0;left:0;right:0;height:50vh;background:linear-gradient(to top,#0c0a09,rgba(12,10,9,.8) 40%,transparent);z-index:20;pointer-events:none;}
 .clg-hero__content{position:relative;z-index:30;width:100%;padding:140px 48px 56px;display:flex;flex-direction:column;align-items:center;text-align:center;margin-top:auto;}
 .clg-pill{display:inline-flex;align-items:center;gap:10px;padding:6px 16px;margin-bottom:20px;border:1px solid rgba(245,158,11,.3);
@@ -342,6 +358,7 @@ input::placeholder,textarea::placeholder{color:#57534e;}
 }
 @media (prefers-reduced-motion:reduce){
   .reveal{opacity:1!important;transform:none!important;}
+  .clg-hero__people.has-split::before,.clg-hero__people.has-split::after{transition:none;transform:none;opacity:1;}
   .clg-pill__dot{animation:none;}
   *{scroll-behavior:auto;}
 }
@@ -843,6 +860,22 @@ input::placeholder,textarea::placeholder{color:#57534e;}
     setTimeout(function(){ revealEls.forEach(function(el){ el.classList.add('is-visible'); }); }, 2600);
   } else {
     revealEls.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+
+  // ----- Hero split entrance -----
+  var heroPeople = document.querySelector('.clg-hero__people');
+  if(heroPeople){
+    var peopleImg = heroPeople.querySelector('img');
+    if(peopleImg){
+      heroPeople.style.setProperty('--people-src','url("'+peopleImg.src.replace(/"/g,'\\"')+'")');
+      heroPeople.classList.add('has-split');
+      var playSplit = function(){ heroPeople.classList.add('is-loaded'); };
+      if(peopleImg.complete){
+        requestAnimationFrame(function(){ requestAnimationFrame(playSplit); });
+      } else {
+        peopleImg.addEventListener('load', playSplit, { once:true });
+      }
+    }
   }
 
   // ----- Parallax -----
