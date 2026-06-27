@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terms of Service | Callahan &amp; Callahan</title>
+<meta name="description" content="Terms of Service for use of the Callahan & Callahan website.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rokkitt:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#1c1917; --bg2:#161412; --bg4:#0c0a09; --card:#181615;
+  --amber:#f59e0b; --amber-2:#d97706; --t1:#fafaf9; --t2:#f5f5f4; --t5:#a8a29e; --t6:#78716c;
+  --line:#292524; --line-2:#44403c; --inter:'Inter',system-ui,sans-serif; --rokkitt:'Rokkitt',Georgia,serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--bg);color:var(--t1);font-family:var(--inter);-webkit-font-smoothing:antialiased;}
+a{color:inherit;}
+
+.clg{position:relative;width:100%;overflow-x:hidden;background:var(--bg);}
+.clg-btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;border:none;border-radius:4px;font-family:var(--inter);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.12em;cursor:pointer;text-decoration:none;}
+.clg-btn--primary{background:linear-gradient(to right,#b45309,var(--amber-2));color:#fff;}
+
+.clg-util{position:absolute;top:0;left:0;right:0;z-index:40;background:rgba(12,10,9,.82);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.05);padding:9px 48px;display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:500;letter-spacing:.08em;color:var(--t5);text-transform:uppercase;}
+.clg-util__phone{color:var(--amber);text-decoration:none;}
+
+.clg-header{position:absolute;top:38px;left:0;right:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:24px 48px;}
+.clg-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.clg-logo__mark{width:48px;height:48px;background:rgba(180,83,9,.2);border:1px solid rgba(217,119,6,.3);border-radius:4px;display:flex;align-items:center;justify-content:center;}
+.clg-logo__name{font-family:var(--rokkitt);font-weight:800;font-size:23px;line-height:1;color:#fff;}
+.clg-logo__sub{font-size:10px;text-transform:uppercase;letter-spacing:.3em;color:var(--amber-2);font-weight:700;}
+.clg-nav{display:flex;align-items:center;gap:40px;font-size:14px;font-weight:600;color:#d6d3d1;text-transform:uppercase;letter-spacing:.1em;}
+.clg-nav a{text-decoration:none;color:#d6d3d1;}
+.clg-nav a:hover,.clg-nav a.current{color:var(--amber);}
+.clg-nav__group{position:relative;display:flex;align-items:center;}
+.clg-subnav{position:absolute;top:100%;left:0;min-width:240px;padding-top:12px;display:none;z-index:60;}
+.clg-subnav__inner{background:rgba(12,10,9,.97);border:1px solid var(--line);padding:8px 0;}
+.clg-subnav a{display:block;padding:12px 14px;font-size:12px;letter-spacing:.12em;color:#d6d3d1;}
+.clg-nav__group:hover .clg-subnav,.clg-nav__group:focus-within .clg-subnav{display:block;}
+
+.clg-hero{position:relative;min-height:56vh;display:flex;align-items:flex-end;background:var(--bg4);overflow:hidden;}
+.clg-hero__bg{position:absolute;inset:-10%;width:120%;height:120%;}
+.clg-hero__bg img{width:100%;height:100%;object-fit:cover;}
+.clg-hero__bg .o{position:absolute;inset:0;background:linear-gradient(to top,#0c0a09,rgba(12,10,9,.75));}
+.clg-hero__inner{position:relative;z-index:10;max-width:1200px;margin:0 auto;width:100%;padding:170px 48px 70px;}
+.clg-hero__title{margin:0;font-family:var(--rokkitt);font-weight:800;font-size:clamp(2.4rem,5.4vw,4.4rem);line-height:.95;color:var(--t2);}
+.clg-hero__sub{margin:16px 0 0;color:#d6d3d1;max-width:760px;line-height:1.7;}
+
+.clg-main{padding:84px 0 110px;background:var(--bg2);}
+.clg-main__inner{max-width:1000px;margin:0 auto;padding:0 48px;}
+.clg-card{background:var(--card);border:1px solid var(--line);padding:32px;}
+.clg-card h2{font-family:var(--rokkitt);font-size:clamp(1.4rem,2.8vw,2.1rem);color:var(--t2);margin:0 0 12px;}
+.clg-card p,.clg-card li{color:var(--t5);line-height:1.75;}
+.clg-card section+section{margin-top:22px;padding-top:22px;border-top:1px solid var(--line);}
+
+.clg-footer{background:var(--bg4);border-top:1px solid var(--line);padding:50px 48px 42px;}
+.clg-footer__bar{max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;}
+.clg-footer__legal{display:flex;gap:24px;color:var(--t6);font-size:12px;}
+.clg-footer__legal a{color:var(--t6);text-decoration:none;}
+.clg-footer__legal a:hover{color:var(--amber);}
+.clg-footer__copy{color:var(--t6);font-size:12px;line-height:1.5;}
+
+@media (max-width:1023px){
+  .clg-util{padding:9px 20px;}
+  .clg-header{padding:18px 20px;}
+  .clg-header .clg-btn{display:none;}
+  .clg-nav{gap:22px;font-size:12px;}
+  .clg-hero__inner{padding:140px 24px 56px;}
+  .clg-main__inner{padding:0 24px;}
+  .clg-footer{padding:42px 20px 36px;}
+}
+</style>
+</head>
+<body>
+<div class="clg">
+  <div class="clg-util">
+    <span>Available 24/7</span>
+    <a class="clg-util__phone" href="tel:18005878423">1-800-JUSTICE</a>
+  </div>
+
+  <header class="clg-header">
+    <a href="index.html" class="clg-logo">
+      <span class="clg-logo__mark">⚖</span>
+      <span style="display:flex;flex-direction:column;">
+        <span class="clg-logo__name">Callahan &amp; Callahan</span>
+        <span class="clg-logo__sub">Attorneys at Law</span>
+      </span>
+    </a>
+    <nav class="clg-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <div class="clg-nav__group">
+        <a href="Services.html">Services</a>
+        <div class="clg-subnav" aria-label="Services submenu">
+          <div class="clg-subnav__inner">
+            <a href="Services-Probate-Delays.html">Probate Delay Guidance</a>
+          </div>
+        </div>
+      </div>
+      <a href="Blog.html">Blog</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <a class="clg-btn clg-btn--primary" href="Contact.html">Free Consultation</a>
+  </header>
+
+  <section class="clg-hero">
+    <div class="clg-hero__bg">
+      <img src="https://images.unsplash.com/photo-1453873623425-02d4c3d8f7f5?auto=format&fit=crop&w=1800&q=80" alt="Legal documents and terms background">
+      <div class="o"></div>
+    </div>
+    <div class="clg-hero__inner">
+      <h1 class="clg-hero__title">Terms of Service</h1>
+      <p class="clg-hero__sub">These terms govern your use of the Callahan &amp; Callahan website and related online content.</p>
+    </div>
+  </section>
+
+  <main class="clg-main">
+    <div class="clg-main__inner">
+      <article class="clg-card">
+        <section>
+          <h2>Website Use</h2>
+          <p>By accessing this website, you agree to use it for lawful purposes and in compliance with all applicable laws and regulations.</p>
+          <p>You agree not to misuse forms, submit false information, interfere with site operation, or attempt unauthorized access to website systems.</p>
+        </section>
+        <section>
+          <h2>No Legal Advice</h2>
+          <p>Content on this website is provided for general informational purposes only and does not constitute legal advice.</p>
+          <p>Viewing website content, sending messages, or submitting forms does not create an attorney-client relationship.</p>
+        </section>
+        <section>
+          <h2>Intellectual Property</h2>
+          <p>All website text, branding, graphics, and media are owned by Callahan &amp; Callahan or licensed to the firm. You may not reproduce, republish, or distribute site content without prior written consent.</p>
+        </section>
+        <section>
+          <h2>Limitation Of Liability</h2>
+          <p>We make reasonable efforts to keep information current and accurate, but we do not guarantee completeness or uninterrupted access. The website is provided on an as-is basis to the fullest extent permitted by law.</p>
+        </section>
+        <section>
+          <h2>Changes To Terms</h2>
+          <p>We may revise these terms at any time. Continued use of the website after updates indicates acceptance of the revised terms.</p>
+          <p>If you have questions about these terms, contact us at <a href="mailto:info@callahanlaw.com">info@callahanlaw.com</a>.</p>
+        </section>
+      </article>
+    </div>
+  </main>
+
+  <footer class="clg-footer">
+    <div class="clg-footer__bar">
+      <div class="clg-footer__legal"><a href="Privacy-Policy.html">Privacy Policy</a><a href="Terms-Of-Service.html">Terms of Service</a></div>
+      <div class="clg-footer__copy">&copy; <span id="clgYear"></span> Callahan &amp; Callahan. All rights reserved.</div>
+    </div>
+  </footer>
+</div>
+<script>document.getElementById('clgYear').textContent=new Date().getFullYear();</script>
+</body>
+</html>

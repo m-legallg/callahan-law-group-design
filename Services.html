@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Guidance For The Probate Process Ahead | Callahan &amp; Callahan</title>
+<meta name="description" content="Comprehensive probate process guidance from Callahan & Callahan, including common delays, executor duties, and strategic legal support for families in North Texas.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Rokkitt:wght@500;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#1c1917; --bg2:#161412; --bg3:#110f0e; --bg4:#0c0a09; --card:#181615; --card2:#1a1816;
+  --amber:#f59e0b; --amber-2:#d97706; --amber-3:#b45309; --amber-l:#fbbf24;
+  --t1:#fafaf9; --t2:#f5f5f4; --t3:#e7e5e4; --t4:#d6d3d1; --t5:#a8a29e; --t6:#78716c;
+  --line:#292524; --line-2:#44403c; --line-soft:rgba(41,37,36,.8);
+  --inter:'Inter',system-ui,sans-serif; --rokkitt:'Rokkitt',Georgia,serif;
+}
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;}
+body{background:var(--bg);color:var(--t1);font-family:var(--inter);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+a{color:inherit;}
+img{display:block;max-width:100%;}
+
+.clg{position:relative;width:100%;overflow:visible;background:var(--bg);}
+.clg-btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:14px 28px;border:none;border-radius:4px;
+  font-family:var(--inter);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.12em;cursor:pointer;text-decoration:none;
+  transition:background .3s ease,border-color .3s ease,color .3s ease;}
+.clg-btn--primary{background:linear-gradient(to right,var(--amber-3),var(--amber-2));color:#fff;box-shadow:0 12px 30px rgba(120,53,15,.4);}
+.clg-btn--primary:hover{background:linear-gradient(to right,var(--amber-2),var(--amber));}
+.clg-btn--ghost{background:rgba(28,25,23,.8);color:#fff;border:1px solid rgba(120,113,108,.5);}
+.clg-btn--ghost:hover{border-color:rgba(245,158,11,.7);}
+
+.clg-util{position:absolute;top:0;left:0;right:0;z-index:40;background:rgba(12,10,9,.82);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(255,255,255,.05);padding:9px 48px;display:flex;justify-content:space-between;align-items:center;
+  font-size:12px;font-weight:500;letter-spacing:.08em;color:var(--t5);text-transform:uppercase;}
+.clg-util__group{display:flex;align-items:center;gap:24px;}
+.clg-util__item{display:flex;align-items:center;gap:8px;}
+.clg-util__phone{display:flex;align-items:center;gap:8px;color:var(--amber);text-decoration:none;}
+.clg-util__phone:hover{color:var(--amber-l);}
+
+.clg-header{position:absolute;top:38px;left:0;right:0;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:24px 48px;}
+.clg-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
+.clg-logo__mark{width:48px;height:48px;background:rgba(180,83,9,.2);border:1px solid rgba(217,119,6,.3);border-radius:4px;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.clg-logo__name{font-family:var(--rokkitt);font-weight:800;font-size:23px;line-height:1;color:#fff;letter-spacing:.02em;}
+.clg-logo__sub{font-size:10px;text-transform:uppercase;letter-spacing:.3em;color:var(--amber-2);font-weight:700;margin-left:2px;}
+.clg-nav{display:flex;align-items:center;gap:40px;font-size:14px;font-weight:600;color:#d6d3d1;text-transform:uppercase;letter-spacing:.1em;}
+.clg-nav a{text-decoration:none;color:#d6d3d1;transition:color .2s ease;}
+.clg-nav a:hover,.clg-nav a.current{color:var(--amber);}
+.clg-nav__group{position:relative;display:flex;align-items:center;}
+.clg-subnav{position:absolute;top:100%;left:0;min-width:240px;padding-top:12px;display:none;z-index:60;}
+.clg-subnav__inner{background:rgba(12,10,9,.97);border:1px solid var(--line);padding:8px 0;}
+.clg-subnav a{display:block;padding:12px 14px;font-size:12px;letter-spacing:.12em;color:var(--t4);}
+.clg-subnav a:hover,.clg-subnav a.current{background:rgba(217,119,6,.12);color:var(--amber);}
+.clg-nav__group:hover .clg-subnav,.clg-nav__group:focus-within .clg-subnav{display:block;}
+.clg-burger{display:none;background:none;border:1px solid var(--line-2);border-radius:4px;padding:10px;cursor:pointer;}
+.clg-mobnav{display:none;position:absolute;top:100%;left:0;right:0;background:rgba(12,10,9,.97);backdrop-filter:blur(10px);
+  border-top:1px solid var(--line);padding:16px 48px 24px;flex-direction:column;gap:4px;z-index:50;}
+.clg-mobnav.open{display:flex;}
+.clg-mobnav a{padding:14px 0;border-bottom:1px solid var(--line);color:#d6d3d1;text-decoration:none;text-transform:uppercase;
+  letter-spacing:.1em;font-size:14px;font-weight:600;}
+.clg-mobnav a.clg-mobnav__sub{padding-left:22px;color:var(--t5);font-size:12px;letter-spacing:.12em;}
+.clg-mobnav a.current{color:var(--amber);}
+.clg-mobnav .clg-btn{margin-top:16px;}
+
+.clg-hero{position:relative;min-height:66vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--bg4);}
+.clg-hero__bg{position:absolute;inset:-10%;z-index:0;width:120%;height:120%;will-change:transform;}
+.clg-hero__bg img{width:100%;height:100%;object-fit:cover;object-position:center;}
+.clg-hero__bg .o1{position:absolute;inset:0;background:rgba(10,12,16,.76);mix-blend-mode:multiply;}
+.clg-hero__bg .o2{position:absolute;inset:0;background:linear-gradient(to top,#0c0a09,rgba(12,10,9,.3) 58%,rgba(6,18,28,.72));}
+.clg-hero__inner{position:relative;z-index:10;max-width:1280px;margin:0 auto;padding:170px 48px 76px;width:100%;}
+.clg-crumbs{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:0 0 20px;padding:0;color:var(--t5);font-size:12px;letter-spacing:.18em;text-transform:uppercase;font-weight:700;}
+.clg-crumbs li{display:flex;align-items:center;gap:8px;}
+.clg-crumbs li+li::before{content:"/";color:var(--line-2);margin-right:4px;}
+.clg-crumbs a{text-decoration:none;color:var(--t5);}
+.clg-crumbs a:hover{color:var(--amber);}
+.clg-hero__title{font-family:var(--rokkitt);font-weight:800;font-size:clamp(2.4rem,5.8vw,5.2rem);line-height:.95;letter-spacing:-.01em;color:var(--t2);margin:0;max-width:980px;text-shadow:0 10px 30px rgba(0,0,0,.45);}
+.clg-hero__lede{max-width:800px;color:var(--t4);font-size:18px;line-height:1.7;margin:20px 0 0;}
+
+.clg-layout{background:var(--bg2);padding:88px 0 64px;border-top:1px solid var(--line-soft);}
+.clg-layout__inner{max-width:1280px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:34px;align-items:start;}
+.clg-content{min-width:0;}
+.clg-section{background:var(--card2);border:1px solid var(--line);padding:34px;margin-bottom:24px;}
+.clg-section h2{font-family:var(--rokkitt);color:var(--t2);font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.05;margin:0 0 14px;}
+.clg-section p{color:var(--t5);font-size:15px;line-height:1.75;margin:0 0 16px;}
+.clg-section p:last-child{margin-bottom:0;}
+.clg-inline-link{color:var(--amber);text-decoration:none;font-weight:700;}
+.clg-inline-link:hover{color:var(--amber-l);}
+
+.clg-acc{display:flex;flex-direction:column;gap:10px;}
+.clg-acc__item{border:1px solid var(--line);background:var(--card);}
+.clg-acc__trigger{width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;background:none;border:none;color:var(--t3);padding:18px 20px;text-align:left;cursor:pointer;font-size:16px;font-weight:600;}
+.clg-acc__trigger:hover{color:var(--amber-l);}
+.clg-acc__trigger .arrow{display:flex;transition:transform .25s ease;color:var(--amber);flex-shrink:0;}
+.clg-acc__item.open .clg-acc__trigger .arrow{transform:rotate(90deg);}
+.clg-acc__panel{display:none;padding:0 20px 18px;color:var(--t5);font-size:15px;line-height:1.7;}
+.clg-acc__item.open .clg-acc__panel{display:block;}
+
+.clg-aside{
+  position:-webkit-sticky;
+  position:sticky;
+  top:124px;
+  align-self:start;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  max-height:calc(100vh - 140px);
+  overflow:auto;
+}
+.clg-sidecard{background:var(--card);border:1px solid var(--line);padding:22px;}
+.clg-sidecard__eyebrow{display:inline-block;color:var(--amber-l);font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:700;margin-bottom:10px;}
+.clg-sidecard h3{font-family:var(--rokkitt);font-size:30px;line-height:1.02;color:var(--t2);margin:0 0 12px;}
+.clg-sidecard p{color:var(--t5);font-size:14px;line-height:1.65;margin:0;}
+.clg-sidecard__stat{display:flex;justify-content:space-between;gap:10px;padding:12px 0;border-top:1px solid var(--line-soft);}
+.clg-sidecard__stat:first-of-type{border-top:none;padding-top:0;}
+.clg-sidecard__stat .k{color:var(--t4);font-weight:600;}
+.clg-sidecard__stat .v{color:var(--amber-l);font-weight:700;}
+
+.clg-testi{background:var(--bg3);padding:44px 0 96px;border-top:1px solid var(--line-soft);}
+.clg-testi__inner{max-width:1280px;margin:0 auto;padding:0 48px;}
+.clg-testi__head{max-width:760px;margin:0 0 28px;}
+.clg-eyebrow{display:inline-flex;align-items:center;gap:10px;background:transparent;padding:0;margin:0 0 12px;}
+.clg-eyebrow::before{content:"";width:36px;height:1px;background:var(--line-2);}
+.clg-eyebrow span{color:var(--t6);letter-spacing:.18em;font-size:12px;font-weight:700;text-transform:uppercase;}
+.clg-testi__head h2{font-family:var(--rokkitt);font-weight:800;font-size:clamp(2.1rem,4.5vw,4rem);line-height:.95;color:var(--t3);margin:0;}
+.clg-testi__head h2 .accent{color:var(--amber-2);}
+.clg-cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;}
+.clg-card{border:1px solid var(--line);background:var(--card2);padding:18px;display:flex;flex-direction:column;gap:14px;min-height:220px;}
+.clg-card__open{all:unset;display:flex;flex-direction:column;gap:14px;cursor:pointer;min-height:220px;}
+.clg-card__open:focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+.clg-card__quote{color:var(--t4);font-size:14px;line-height:1.65;}
+.clg-card__name{color:var(--amber-l);font-size:12px;text-transform:uppercase;letter-spacing:.14em;font-weight:700;}
+.clg-card__meta{color:var(--t6);font-size:12px;}
+
+.clg-cta{position:relative;z-index:30;background:var(--bg2);width:100%;padding:144px 24px;border-top:1px solid var(--bg);overflow:hidden;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.clg-cta__ghost{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;overflow:hidden;pointer-events:none;opacity:.03;}
+.clg-cta__ghost h2{font-family:var(--rokkitt);font-weight:900;font-size:20vw;line-height:1;color:#fff;white-space:nowrap;letter-spacing:-.04em;margin:0;}
+.clg-cta__inner{position:relative;z-index:10;max-width:896px;margin:0 auto;text-align:center;display:flex;flex-direction:column;align-items:center;}
+.clg-cta__statement{font-size:clamp(1.25rem,3vw,1.875rem);color:var(--t3);font-weight:500;margin:0 0 48px;line-height:1.5;}
+.clg-cta__statement .accent{color:var(--amber);font-weight:700;}
+.clg-btn--cta{padding:20px 40px;font-size:14px;letter-spacing:.2em;box-shadow:0 10px 30px rgba(217,119,6,.3);}
+
+.clg-footer{position:relative;z-index:30;background:var(--bg4);border-top:1px solid var(--bg);padding:80px 48px 48px;}
+.clg-footer__grid{max-width:1280px;margin:0 auto 64px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:48px;}
+.clg-footer__logo{display:flex;align-items:center;gap:12px;margin-bottom:24px;}
+.clg-footer__logo .clg-logo__mark{width:40px;height:40px;}
+.clg-footer__logo .clg-logo__name{font-size:21px;}
+.clg-footer__logo .clg-logo__sub{font-size:9px;}
+.clg-footer__about{color:var(--t5);font-size:14px;line-height:1.6;margin:0;}
+.clg-footer__grid h4{color:var(--t2);font-weight:700;text-transform:uppercase;letter-spacing:.1em;font-size:14px;margin:0 0 24px;}
+.clg-footer__grid ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:12px;}
+.clg-footer__grid a{color:var(--t5);text-decoration:none;font-size:14px;transition:color .2s ease;}
+.clg-footer__grid a:hover{color:var(--amber);}
+.clg-footer__bar{max-width:1280px;margin:0 auto;border-top:1px solid rgba(41,37,36,.8);padding-top:32px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:24px;}
+.clg-footer__legal{display:flex;gap:24px;color:var(--t6);font-size:12px;}
+.clg-footer__legal a{color:var(--t6);text-decoration:none;}
+.clg-footer__legal a:hover{color:var(--amber);}
+.clg-footer__copy{color:var(--t6);font-size:12px;text-align:right;line-height:1.5;}
+
+.clg-modal{position:fixed;inset:0;z-index:100;display:none;}
+.clg-modal.open{display:block;}
+.clg-modal__backdrop{position:absolute;inset:0;background:rgba(0,0,0,.65);backdrop-filter:blur(4px);}
+.clg-modal__panel{position:relative;z-index:2;max-width:720px;margin:8vh auto 0;background:var(--card2);border:1px solid var(--line);padding:28px;box-shadow:0 30px 70px rgba(0,0,0,.6);}
+.clg-modal__close{position:absolute;top:12px;right:12px;background:none;border:1px solid var(--line-2);color:var(--t4);width:34px;height:34px;cursor:pointer;}
+.clg-modal__title{font-family:var(--rokkitt);font-size:38px;line-height:1.02;margin:0 0 10px;color:var(--t2);padding-right:40px;}
+.clg-modal__meta{color:var(--amber-l);font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:700;margin:0 0 16px;}
+.clg-modal__body{color:var(--t4);font-size:16px;line-height:1.75;margin:0;}
+
+.reveal{opacity:0;transform:translateY(32px);transition:opacity .8s ease,transform .9s cubic-bezier(.16,1,.3,1);}
+.reveal.is-visible{opacity:1;transform:none;}
+
+@media (max-width:1100px){
+  .clg-layout__inner{grid-template-columns:1fr;}
+  .clg-aside{position:static;max-height:none;overflow:visible;}
+  .clg-cards{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:1023px){
+  .clg-util{padding:9px 20px;}
+  .clg-util__group{gap:14px;}
+  .clg-header{padding:18px 20px;}
+  .clg-nav,.clg-header>.clg-btn{display:none;}
+  .clg-burger{display:inline-flex;}
+  .clg-mobnav{padding:16px 20px 24px;}
+  .clg-hero__inner{padding:140px 24px 64px;}
+  .clg-layout__inner,.clg-testi__inner{padding:0 24px;}
+  .clg-section{padding:24px;}
+  .clg-cta{padding:120px 20px;}
+  .clg-modal__panel{margin:5vh 16px 0;}
+}
+@media (max-width:640px){
+  .clg-layout{padding:70px 0 50px;}
+  .clg-cards{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+<div class="clg" id="clg">
+  <div class="clg-util">
+    <div class="clg-util__group">
+      <span class="clg-util__item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+        <span>Available 24/7</span>
+      </span>
+      <span class="clg-util__item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Aggressive Representation</span>
+      </span>
+    </div>
+    <a href="tel:18005878423" class="clg-util__phone">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+      <span>1-800-JUSTICE</span>
+    </a>
+  </div>
+
+  <header class="clg-header">
+    <a href="index.html" class="clg-logo">
+      <span class="clg-logo__mark">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg>
+      </span>
+      <span style="display:flex;flex-direction:column;">
+        <span class="clg-logo__name">Callahan &amp; Callahan</span>
+        <span class="clg-logo__sub">Attorneys at Law</span>
+      </span>
+    </a>
+    <nav class="clg-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <div class="clg-nav__group">
+        <a href="Services.html" class="current" aria-current="page">Services</a>
+        <div class="clg-subnav" aria-label="Services submenu">
+          <div class="clg-subnav__inner">
+            <a href="Services-Probate-Delays.html">Probate Delay Guidance</a>
+          </div>
+        </div>
+      </div>
+      <a href="Blog.html">Blog</a>
+      <a href="Contact.html">Contact</a>
+    </nav>
+    <button class="clg-btn clg-btn--primary">Free Consultation</button>
+    <button class="clg-burger" id="clgBurger" aria-label="Menu" aria-expanded="false">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"></path></svg>
+    </button>
+    <div class="clg-mobnav" id="clgMobnav">
+      <a href="index.html">Home</a>
+      <a href="About.html">About</a>
+      <a href="Services.html" class="current">Services</a>
+      <a href="Services-Probate-Delays.html" class="clg-mobnav__sub">Probate Delay Guidance</a>
+      <a href="Blog.html">Blog</a>
+      <a href="Contact.html">Contact</a>
+      <button class="clg-btn clg-btn--primary">Free Consultation</button>
+    </div>
+  </header>
+
+  <section class="clg-hero">
+    <div class="clg-hero__bg" data-parallax="0.2">
+      <img src="https://images.unsplash.com/photo-1589216532372-1c2a367900d9?auto=format&fit=crop&w=1800&q=80" alt="Probate law resources and family planning documents">
+      <div class="o1"></div>
+      <div class="o2"></div>
+    </div>
+    <div class="clg-hero__inner reveal">
+      <nav aria-label="Breadcrumb">
+        <ol class="clg-crumbs">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Blog.html">Blog</a></li>
+          <li><span aria-current="page">Services</span></li>
+        </ol>
+      </nav>
+      <h1 class="clg-hero__title">Guidance For The Probate Process Ahead</h1>
+      <p class="clg-hero__lede">A structured parent guide for families, executors, and beneficiaries. Learn what causes probate delays, how to protect estate assets, and when to involve trial-tested legal counsel.</p>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <section class="clg-layout" aria-labelledby="probate-overview-heading">
+      <div class="clg-layout__inner">
+        <div class="clg-content">
+          <article class="clg-section reveal" id="probate-overview">
+            <h2 id="probate-overview-heading">What Factors Can Delay The Probate Process?</h2>
+            <p>Probate timelines vary based on court schedule, document completeness, estate complexity, creditor claims, and family dynamics. Delays are often preventable when the administration starts with a full inventory, disciplined communication, and accurate filings.</p>
+            <p>When families treat this stage as a roadmap instead of a checklist, contested points are easier to identify and resolve before they become expensive hearings.</p>
+          </article>
+
+          <section class="clg-section reveal" aria-labelledby="common-delay-heading">
+            <h2 id="common-delay-heading">Common Issues That Can Slow Probate Administration</h2>
+            <div class="clg-acc" id="clgDelayAccordion">
+              <div class="clg-acc__item">
+                <h3>
+                  <button class="clg-acc__trigger" id="delay-trigger-1" aria-expanded="false" aria-controls="delay-panel-1" type="button">
+                    <span>Missing Or Incomplete Estate Documents</span>
+                    <span class="arrow" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    </span>
+                  </button>
+                </h3>
+                <div class="clg-acc__panel" id="delay-panel-1" role="region" aria-labelledby="delay-trigger-1" hidden>
+                  Estate administration can stall when wills, trusts, beneficiary records, or ownership evidence are missing or inconsistent. Early document triage helps avoid costly rework later.
+                </div>
+              </div>
+
+              <div class="clg-acc__item">
+                <h3>
+                  <button class="clg-acc__trigger" id="delay-trigger-2" aria-expanded="false" aria-controls="delay-panel-2" type="button">
+                    <span>Beneficiary Disputes And Family Conflict</span>
+                    <span class="arrow" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    </span>
+                  </button>
+                </h3>
+                <div class="clg-acc__panel" id="delay-panel-2" role="region" aria-labelledby="delay-trigger-2" hidden>
+                  Even small disagreements can delay distributions for months. A transparent, documented process reduces escalation and keeps beneficiaries aligned on what happens next.
+                </div>
+              </div>
+
+              <div class="clg-acc__item">
+                <h3>
+                  <button class="clg-acc__trigger" id="delay-trigger-3" aria-expanded="false" aria-controls="delay-panel-3" type="button">
+                    <span>Creditor Claims And Outstanding Debts</span>
+                    <span class="arrow" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    </span>
+                  </button>
+                </h3>
+                <div class="clg-acc__panel" id="delay-panel-3" role="region" aria-labelledby="delay-trigger-3" hidden>
+                  Probate must account for legitimate claims before final distribution. Coordinated claim review and response timelines help preserve assets and minimize avoidable exposure.
+                </div>
+              </div>
+
+              <div class="clg-acc__item">
+                <h3>
+                  <button class="clg-acc__trigger" id="delay-trigger-4" aria-expanded="false" aria-controls="delay-panel-4" type="button">
+                    <span>Difficulty Locating Or Valuing Estate Assets</span>
+                    <span class="arrow" aria-hidden="true">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg>
+                    </span>
+                  </button>
+                </h3>
+                <div class="clg-acc__panel" id="delay-panel-4" role="region" aria-labelledby="delay-trigger-4" hidden>
+                  Real estate, business interests, and digital accounts often require additional verification. A complete valuation record keeps court reporting accurate and distributions defensible.
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <article class="clg-section reveal" aria-labelledby="deeper-post-heading">
+            <h2 id="deeper-post-heading">Need The Detailed Executor Breakdown?</h2>
+            <p>Use this parent page as your roadmap, then review our focused article on executor responsibilities for practical step-by-step expectations in active probate matters.</p>
+            <a class="clg-inline-link" href="Blog-Executor-Duties.html">Read: Duties Of An Executor And Personal Representative</a>
+            <p style="margin-top:14px;">Need a child-page example for this section hierarchy?</p>
+            <a class="clg-inline-link" href="Services-Probate-Delays.html">Open: Probate Delay Guidance Child Page</a>
+          </article>
+        </div>
+
+        <aside class="clg-aside reveal" aria-label="Probate page summary and actions">
+          <section class="clg-sidecard">
+            <span class="clg-sidecard__eyebrow">Our Promise</span>
+            <h3>Why Callahan &amp; Callahan?</h3>
+            <p>We combine compassionate client support with strict probate process control, helping families move confidently through each legal phase.</p>
+          </section>
+
+          <section class="clg-sidecard">
+            <span class="clg-sidecard__eyebrow">Quick Stats</span>
+            <div class="clg-sidecard__stat"><span class="k">Years Practicing</span><span class="v">25+</span></div>
+            <div class="clg-sidecard__stat"><span class="k">Families Supported</span><span class="v">5,000+</span></div>
+            <div class="clg-sidecard__stat"><span class="k">Free Case Reviews</span><span class="v">Yes</span></div>
+          </section>
+
+          <section class="clg-sidecard">
+            <span class="clg-sidecard__eyebrow">Need Immediate Guidance?</span>
+            <p style="margin-bottom:16px;">Get a direct strategy session for your estate or probate issue.</p>
+            <a href="Contact.html" class="clg-btn clg-btn--primary" style="width:100%;">Free Consultation</a>
+          </section>
+        </aside>
+      </div>
+    </section>
+
+    <section class="clg-testi" aria-labelledby="testi-heading">
+      <div class="clg-testi__inner">
+        <header class="clg-testi__head reveal">
+          <div class="clg-eyebrow"><span>Client Testimonials</span></div>
+          <h2 id="testi-heading">Client Experiences <span class="accent">You Can Trust</span></h2>
+        </header>
+
+        <ul class="clg-cards reveal" style="list-style:none;padding:0;margin:0;" id="clgTestimonialCards">
+          <li class="clg-card">
+            <button class="clg-card__open" type="button" data-name="Martin B." data-location="Dallas, TX" data-full="Callahan & Callahan gave our family structure and confidence during a difficult probate process. Every milestone was explained and documented.">
+              <span class="clg-card__quote">"Callahan &amp; Callahan gave our family structure and confidence during a difficult probate process..."</span>
+              <span class="clg-card__name">Martin B.</span>
+              <span class="clg-card__meta">Dallas, TX</span>
+            </button>
+          </li>
+          <li class="clg-card">
+            <button class="clg-card__open" type="button" data-name="Rachel T." data-location="Fort Worth, TX" data-full="Their team reduced conflict between beneficiaries by keeping communication clear and deadlines visible. The process moved faster than we expected.">
+              <span class="clg-card__quote">"Their team reduced conflict between beneficiaries by keeping communication clear and deadlines visible..."</span>
+              <span class="clg-card__name">Rachel T.</span>
+              <span class="clg-card__meta">Fort Worth, TX</span>
+            </button>
+          </li>
+          <li class="clg-card">
+            <button class="clg-card__open" type="button" data-name="Eleanor V." data-location="Plano, TX" data-full="I appreciated how practical they were about executor duties. We had a plan, task list, and timeline from day one.">
+              <span class="clg-card__quote">"I appreciated how practical they were about executor duties. We had a plan, task list, and timeline from day one..."</span>
+              <span class="clg-card__name">Eleanor V.</span>
+              <span class="clg-card__meta">Plano, TX</span>
+            </button>
+          </li>
+          <li class="clg-card">
+            <button class="clg-card__open" type="button" data-name="Michael R." data-location="Frisco, TX" data-full="When a creditor dispute surfaced, they stepped in quickly and protected the estate from unnecessary loss. Highly recommend.">
+              <span class="clg-card__quote">"When a creditor dispute surfaced, they stepped in quickly and protected the estate from unnecessary loss..."</span>
+              <span class="clg-card__name">Michael R.</span>
+              <span class="clg-card__meta">Frisco, TX</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <section class="clg-cta">
+    <div class="clg-cta__ghost"><h2>JUSTICE</h2></div>
+    <div class="clg-cta__inner reveal">
+      <p class="clg-cta__statement">Ready to move probate forward without delay?<br><span class="accent">Speak with our team today.</span></p>
+      <a href="Contact.html" class="clg-btn clg-btn--primary clg-btn--cta">Book Free Consultation</a>
+    </div>
+  </section>
+
+  <footer class="clg-footer">
+    <div class="clg-footer__grid">
+      <div>
+        <div class="clg-footer__logo">
+          <span class="clg-logo__mark"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"></path><path d="M7 21h10"></path><path d="M12 3v18"></path><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"></path></svg></span>
+          <span style="display:flex;flex-direction:column;"><span class="clg-logo__name">Callahan &amp; Callahan</span><span class="clg-logo__sub">Attorneys at Law</span></span>
+        </div>
+        <p class="clg-footer__about">A husband-and-wife trial firm in Dallas. Two partners, one promise - we treat your fight as our own.</p>
+      </div>
+      <div>
+        <h4>Practice Areas</h4>
+        <ul><li><a href="Services.html">Services Overview</a></li><li><a href="Services-Probate-Delays.html">Probate Delay Guidance</a></li><li><a href="Blog-Executor-Duties.html">Executor Duties Article</a></li><li><a href="Blog.html">Legal Insights Blog</a></li><li><a href="Contact.html">Request Consultation</a></li></ul>
+      </div>
+      <div>
+        <h4>Firm</h4>
+        <ul><li><a href="About.html">Our Attorneys</a></li><li><a href="About.html">Case Results</a></li><li><a href="About.html">Client Reviews</a></li><li><a href="Blog.html">News &amp; Press</a></li><li><a href="About.html">Careers</a></li></ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul><li><a href="Contact.html">Free Consultation</a></li><li><a href="Contact.html">Locations &amp; Directions</a></li><li><a href="tel:18005878423">1-800-JUSTICE</a></li><li><a href="mailto:info@callahanlaw.com">info@callahanlaw.com</a></li></ul>
+      </div>
+    </div>
+    <div class="clg-footer__bar">
+      <div class="clg-footer__legal"><a href="Privacy-Policy.html">Privacy Policy</a><a href="Terms-Of-Service.html">Terms of Service</a></div>
+      <div class="clg-footer__copy">&copy; <span id="clgYear"></span> Callahan &amp; Callahan. All rights reserved.<br>Attorney Advertising. Past results do not guarantee future outcomes.</div>
+    </div>
+  </footer>
+</div>
+
+<div class="clg-modal" id="clgTestimonialModal" aria-hidden="true">
+  <div class="clg-modal__backdrop" data-close-modal="true"></div>
+  <section class="clg-modal__panel" role="dialog" aria-modal="true" aria-labelledby="clgModalTitle" aria-describedby="clgModalBody" tabindex="-1">
+    <button class="clg-modal__close" type="button" aria-label="Close testimonial" data-close-modal="true">×</button>
+    <h2 id="clgModalTitle" class="clg-modal__title"></h2>
+    <p id="clgModalMeta" class="clg-modal__meta"></p>
+    <p id="clgModalBody" class="clg-modal__body"></p>
+  </section>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type": "ListItem", "position": 1, "name": "Home", "item": "index.html"},
+    {"@type": "ListItem", "position": 2, "name": "Blog", "item": "Blog.html"},
+    {"@type": "ListItem", "position": 3, "name": "Services", "item": "Services.html"}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What documents cause the most probate delays?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Missing or inconsistent wills, beneficiary records, and ownership evidence are common delay triggers in probate administration."}
+    },
+    {
+      "@type": "Question",
+      "name": "How do family conflicts affect probate timelines?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Disputes can pause distributions and increase court involvement. Transparent communication and documented decision paths reduce escalation."}
+    },
+    {
+      "@type": "Question",
+      "name": "Why are creditor claims important in probate?",
+      "acceptedAnswer": {"@type": "Answer", "text": "Legitimate creditor claims must be addressed before final distribution to protect the estate and ensure compliant administration."}
+    }
+  ]
+}
+</script>
+
+<script>
+(function(){
+  var burger=document.getElementById('clgBurger'),mobnav=document.getElementById('clgMobnav');
+  if(burger&&mobnav){
+    burger.addEventListener('click',function(){
+      var open=mobnav.classList.toggle('open');
+      burger.setAttribute('aria-expanded',open?'true':'false');
+    });
+    Array.prototype.forEach.call(mobnav.querySelectorAll('a'),function(a){
+      a.addEventListener('click',function(){mobnav.classList.remove('open');});
+    });
+  }
+
+  var y=document.getElementById('clgYear');
+  if(y) y.textContent=new Date().getFullYear();
+
+  var revealEls=Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(entry){
+        if(entry.isIntersecting){
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    },{rootMargin:'0px 0px -8% 0px',threshold:0.04});
+    revealEls.forEach(function(el){io.observe(el);});
+    setTimeout(function(){revealEls.forEach(function(el){el.classList.add('is-visible');});},2600);
+  } else {
+    revealEls.forEach(function(el){el.classList.add('is-visible');});
+  }
+
+  var parallaxEls=Array.prototype.slice.call(document.querySelectorAll('[data-parallax]'));
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function onScroll(){
+    if(reduce) return;
+    var yPos=window.scrollY||window.pageYOffset||0;
+    parallaxEls.forEach(function(el){
+      el.style.transform='translateY('+(yPos*parseFloat(el.getAttribute('data-parallax')))+'px)';
+    });
+  }
+  window.addEventListener('scroll',onScroll,{passive:true});
+  onScroll();
+
+  var acc=document.getElementById('clgDelayAccordion');
+  if(acc){
+    var triggers=Array.prototype.slice.call(acc.querySelectorAll('.clg-acc__trigger'));
+    function closeAll(){
+      triggers.forEach(function(btn){
+        var panel=document.getElementById(btn.getAttribute('aria-controls'));
+        btn.setAttribute('aria-expanded','false');
+        btn.closest('.clg-acc__item').classList.remove('open');
+        panel.hidden=true;
+      });
+    }
+    triggers.forEach(function(btn){
+      btn.addEventListener('click',function(){
+        var panel=document.getElementById(btn.getAttribute('aria-controls'));
+        var open=btn.getAttribute('aria-expanded')==='true';
+        closeAll();
+        if(!open){
+          btn.setAttribute('aria-expanded','true');
+          btn.closest('.clg-acc__item').classList.add('open');
+          panel.hidden=false;
+        }
+      });
+    });
+  }
+
+  var modal=document.getElementById('clgTestimonialModal');
+  var modalPanel=modal.querySelector('.clg-modal__panel');
+  var titleEl=document.getElementById('clgModalTitle');
+  var metaEl=document.getElementById('clgModalMeta');
+  var bodyEl=document.getElementById('clgModalBody');
+  var openers=Array.prototype.slice.call(document.querySelectorAll('.clg-card__open'));
+  var lastActive=null;
+
+  function getFocusable(container){
+    return Array.prototype.slice.call(container.querySelectorAll('button,[href],input,select,textarea,[tabindex]:not([tabindex="-1"])'));
+  }
+
+  function closeModal(){
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden','true');
+    document.body.style.overflow='';
+    if(lastActive) lastActive.focus();
+  }
+
+  function openModal(data, opener){
+    lastActive=opener;
+    titleEl.textContent=data.name;
+    metaEl.textContent=data.location;
+    bodyEl.textContent=data.full;
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden','false');
+    document.body.style.overflow='hidden';
+    modalPanel.focus();
+  }
+
+  openers.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      openModal({
+        name:btn.getAttribute('data-name')||'',
+        location:btn.getAttribute('data-location')||'',
+        full:btn.getAttribute('data-full')||''
+      }, btn);
+    });
+  });
+
+  modal.addEventListener('click',function(e){
+    if(e.target && e.target.getAttribute('data-close-modal')==='true') closeModal();
+  });
+
+  document.addEventListener('keydown',function(e){
+    if(!modal.classList.contains('open')) return;
+    if(e.key==='Escape'){
+      closeModal();
+      return;
+    }
+    if(e.key==='Tab'){
+      var focusable=getFocusable(modalPanel);
+      if(!focusable.length){
+        e.preventDefault();
+        return;
+      }
+      var first=focusable[0], last=focusable[focusable.length-1];
+      if(e.shiftKey && document.activeElement===first){
+        e.preventDefault();
+        last.focus();
+      } else if(!e.shiftKey && document.activeElement===last){
+        e.preventDefault();
+        first.focus();
+      }
+    }
+  });
+})();
+</script>
+</body>
+</html>
