@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Meet Margaret and James Callahan — a husband-and-wife trial team in Dallas with 25+ years of verdicts in injury and probate matters. No fee unless we win.">
+<link rel="canonical" href="https://www.callahanlaw.com/About.html">
 <title>About — Callahan &amp; Callahan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -605,6 +607,32 @@ input::placeholder,textarea::placeholder{color:#57534e;}
   function onScroll(){ if(reduce) return; var yy=window.scrollY||window.pageYOffset||0;
     pAbs.forEach(function(el){el.style.transform='translateY('+(yy*parseFloat(el.getAttribute('data-parallax')))+'px)';}); }
   window.addEventListener('scroll',onScroll,{passive:true}); onScroll();
+})();
+</script>
+<script>
+(function(){
+  function animateCount(el){
+    var target=parseFloat(el.getAttribute('data-count'));
+    if(isNaN(target)) return;
+    var dur=1500, start=null;
+    el.textContent='0';
+    function step(ts){
+      if(!start) start=ts;
+      var t=Math.min(1,(ts-start)/dur);
+      var e=1-Math.pow(1-t,3);
+      el.textContent=Math.round(e*target);
+      if(t<1) requestAnimationFrame(step); else el.textContent=String(target);
+    }
+    requestAnimationFrame(step);
+  }
+  var nums=[].slice.call(document.querySelectorAll('[data-count]'));
+  if(!nums.length) return;
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ animateCount(en.target); io.unobserve(en.target); } });
+    },{threshold:0.4});
+    nums.forEach(function(n){ io.observe(n); });
+  } else { nums.forEach(animateCount); }
 })();
 </script>
 </body>

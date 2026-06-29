@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Callahan & Callahan is a husband-and-wife trial firm serving the Dallas–Fort Worth Metroplex with personal injury and probate representation. No fee unless we win — free 24/7 consultations.">
+<link rel="canonical" href="https://www.callahanlaw.com/">
 <title>Callahan &amp; Callahan — Injury Lawyers</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -116,14 +118,19 @@ input::placeholder,textarea::placeholder{color:#57534e;}
 .clg-hero__cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;}
 
 /* ===== Stats ===== */
-.clg-stats{position:relative;z-index:30;background:var(--bg2);width:100%;padding:96px 0;box-shadow:0 -20px 40px var(--bg);}
-.clg-stats__col{display:flex;flex-direction:column;width:100%;}
-.clg-stat{width:100%;border-top:1px solid var(--line-soft);}
-.clg-stat:last-child{border-bottom:1px solid var(--line-soft);}
-.clg-stat__inner{max-width:1600px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;padding:64px 48px;gap:24px;}
-.clg-stat__num{font-family:var(--rokkitt);font-weight:800;font-size:clamp(5rem,13vw,15rem);line-height:.75;color:var(--t3);letter-spacing:-.03em;}
-.clg-stat__num span{color:var(--amber-2);font-size:.6em;margin-left:14px;}
-.clg-stat__label{font-size:18px;color:var(--amber-2);text-transform:uppercase;letter-spacing:.3em;font-weight:700;margin-top:36px;text-align:right;}
+.clg-stats{position:relative;z-index:30;background:var(--bg2);width:100%;padding:56px 0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);}
+.clg-stats__inner{max-width:1280px;margin:0 auto;padding:0 48px;}
+.clg-stats__head{display:flex;align-items:center;gap:12px;margin-bottom:30px;}
+.clg-stats__kicker{font-family:var(--inter);font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--amber-2);}
+.clg-stats__line{flex:1;height:1px;background:var(--line);}
+.clg-stats__col{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));}
+.clg-stat{padding:0 36px;}
+.clg-stat+.clg-stat{border-left:1px solid var(--line);}
+.clg-stat__num{font-family:var(--rokkitt);font-weight:800;font-size:clamp(3rem,5.7vw,4.4rem);line-height:.85;color:var(--t3);letter-spacing:-.02em;}
+.clg-stat__num span{color:var(--amber-2);}
+.clg-stat__label{font-family:var(--inter);font-size:12px;color:var(--amber-2);text-transform:uppercase;letter-spacing:.2em;font-weight:700;margin-top:14px;}
+.clg-stat__desc{font-size:13px;color:var(--t5);line-height:1.5;margin:10px 0 0;}
+.clg-stats__disclaimer{font-size:12px;color:var(--t6);font-style:italic;margin:24px 0 0;padding-top:16px;border-top:1px solid var(--line);}
 
 /* ===== Split sections ===== */
 .clg-split{position:relative;z-index:30;background:var(--bg3);width:100%;border-top:1px solid var(--bg);overflow:hidden;display:flex;flex-wrap:wrap;align-items:center;}
@@ -194,6 +201,28 @@ input::placeholder,textarea::placeholder{color:#57534e;}
 .clg-area__l{display:flex;align-items:center;gap:16px;}
 .clg-area__dot{width:8px;height:8px;border-radius:50%;background:var(--line-2);}
 .clg-area__name{color:#d6d3d1;font-weight:700;text-transform:uppercase;letter-spacing:.08em;font-size:14px;}
+
+/* ===== Modal ===== */
+.clg-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:24px;}
+.clg-modal.open{display:flex;}
+.clg-modal__overlay{position:absolute;inset:0;background:rgba(12,10,9,.82);backdrop-filter:blur(6px);}
+.clg-modal__panel{position:relative;z-index:1;width:100%;max-width:520px;background:#201c1a;border:1px solid #292524;box-shadow:0 30px 70px rgba(0,0,0,.6);padding:40px;animation:clgModalIn .28s cubic-bezier(.16,1,.3,1);}
+@keyframes clgModalIn{from{opacity:0;transform:translateY(16px) scale(.98);}to{opacity:1;transform:none;}}
+.clg-modal__close{position:absolute;top:12px;right:16px;background:none;border:none;color:#a8a29e;font-size:28px;line-height:1;cursor:pointer;padding:6px;}
+.clg-modal__close:hover{color:#f59e0b;}
+.clg-modal__eyebrow{display:inline-block;color:#d97706;font-size:11px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;margin-bottom:14px;}
+.clg-modal__title{font-family:'Rokkitt',serif;font-weight:800;font-size:34px;line-height:1.02;color:#f5f5f4;margin:0 0 8px;}
+.clg-modal__tag{color:#f59e0b;font-size:12px;text-transform:uppercase;letter-spacing:.16em;font-weight:700;margin:0 0 20px;}
+.clg-modal__body{color:#a8a29e;font-size:15px;line-height:1.7;margin:0 0 24px;}
+.clg-modal__rows{display:flex;flex-direction:column;gap:12px;margin-bottom:28px;border-top:1px solid #292524;padding-top:20px;}
+.clg-modal__row{display:flex;justify-content:space-between;gap:16px;font-size:13px;}
+.clg-modal__row .k{color:#78716c;text-transform:uppercase;letter-spacing:.1em;font-weight:600;}
+.clg-modal__row .v{color:#e7e5e4;font-weight:600;text-align:right;}
+.clg-modal__actions{display:flex;flex-wrap:wrap;gap:12px;}
+.clg-modal__actions .clg-btn{flex:1;min-width:150px;}
+.clg-modal__call{background:transparent;border:1px solid #44403c;color:#e7e5e4;}
+.clg-modal__call:hover{border-color:#f59e0b;color:#f59e0b;}
+@media (max-width:560px){.clg-modal__panel{padding:28px 22px;}.clg-modal__title{font-size:28px;}}
 
 /* ===== Locations ===== */
 .clg-loc{position:relative;z-index:30;background:var(--bg);padding:112px 0;overflow:hidden;border-bottom:1px solid var(--line);}
@@ -339,7 +368,9 @@ input::placeholder,textarea::placeholder{color:#57534e;}
   .clg-burger{display:inline-flex;}
   .clg-wrap,.clg-testi__inner,.clg-areas__inner,.clg-faq__inner,.clg-loc__head,.clg-loc__grid{padding-left:24px;padding-right:24px;}
   .clg-hero__content{padding:120px 24px 48px;}
-  .clg-stat__inner{padding:40px 24px;}
+  .clg-stats{padding:44px 0;}
+  .clg-stats__inner{padding:0 24px;}
+  .clg-stat{padding:0 18px;}
   .clg-split__media{padding:48px 24px;min-height:0;}
   .clg-split__body{padding:32px 24px 56px;}
   .clg-split__media[data-order="2"]{order:-1;}
@@ -350,8 +381,10 @@ input::placeholder,textarea::placeholder{color:#57534e;}
 }
 @media (max-width:560px){
   .clg-util__group .clg-util__item:nth-child(2){display:none;}
-  .clg-stat__inner{flex-direction:column;gap:8px;}
-  .clg-stat__label{text-align:left;margin-top:0;}
+  .clg-stats__head{margin-bottom:18px;}
+  .clg-stats__col{grid-template-columns:1fr;gap:18px;}
+  .clg-stat{padding:0;border-left:none!important;}
+  .clg-stat+.clg-stat{padding-top:18px;border-top:1px solid var(--line);}
   .clg-loc__grid{grid-template-columns:1fr;}
   .clg-card,.clg-loc__grid{min-width:0;}
   .clg-loc__grid{grid-template-columns:minmax(0,1fr);}
@@ -462,10 +495,26 @@ input::placeholder,textarea::placeholder{color:#57534e;}
 
   <!-- Trust stats -->
   <section class="clg-stats">
-    <div class="clg-stats__col">
-      <div class="clg-stat reveal left"><div class="clg-stat__inner"><div class="clg-stat__num">$500<span>M+</span></div><div class="clg-stat__label">Recovered</div></div></div>
-      <div class="clg-stat reveal left"><div class="clg-stat__inner"><div class="clg-stat__num">99<span>%</span></div><div class="clg-stat__label">Success Rate</div></div></div>
-      <div class="clg-stat reveal left"><div class="clg-stat__inner"><div class="clg-stat__num">25<span>+</span></div><div class="clg-stat__label">Years Experience</div></div></div>
+    <div class="clg-stats__inner">
+      <div class="clg-stats__head reveal up"><span class="clg-stats__kicker">By The Numbers</span><span class="clg-stats__line"></span></div>
+      <div class="clg-stats__col">
+        <div class="clg-stat reveal up">
+          <div class="clg-stat__num">$<span data-count="500">500</span><span>M+</span></div>
+          <div class="clg-stat__label">Recovered</div>
+          <p class="clg-stat__desc">Across injury and probate matters since 1998.</p>
+        </div>
+        <div class="clg-stat reveal up">
+          <div class="clg-stat__num"><span data-count="99">99</span><span>%</span></div>
+          <div class="clg-stat__label">Success Rate</div>
+          <p class="clg-stat__desc">Favorable verdicts and settlements for clients.</p>
+        </div>
+        <div class="clg-stat reveal up">
+          <div class="clg-stat__num"><span data-count="25">25</span><span>+</span></div>
+          <div class="clg-stat__label">Years Experience</div>
+          <p class="clg-stat__desc">Two partners, trying cases side by side.</p>
+        </div>
+      </div>
+      <p class="clg-stats__disclaimer reveal up">Prior results do not guarantee a similar outcome. Figures reflect cumulative firm history.</p>
     </div>
   </section>
 
@@ -727,6 +776,22 @@ input::placeholder,textarea::placeholder{color:#57534e;}
 
 </div>
 
+  <div class="clg-modal" id="clgAreaModal" aria-hidden="true">
+    <div class="clg-modal__overlay" data-close></div>
+    <div class="clg-modal__panel" role="dialog" aria-modal="true" aria-labelledby="clgAreaTitle">
+      <button class="clg-modal__close" data-close aria-label="Close">&times;</button>
+      <span class="clg-modal__eyebrow">Service Area</span>
+      <h3 class="clg-modal__title" id="clgAreaTitle"></h3>
+      <p class="clg-modal__tag">Probate &amp; Injury Representation</p>
+      <p class="clg-modal__body" id="clgAreaBody"></p>
+      <div class="clg-modal__rows" id="clgAreaRows"></div>
+      <div class="clg-modal__actions">
+        <a class="clg-btn clg-btn--primary" href="Contact.html">Free Consultation</a>
+        <a class="clg-btn clg-modal__call" href="tel:18005878423">Call 1-800-JUSTICE</a>
+      </div>
+    </div>
+  </div>
+
 <script>
 (function(){
   var reviews = [
@@ -749,10 +814,39 @@ input::placeholder,textarea::placeholder{color:#57534e;}
   var QUOTE = '<svg class="clg-review__quotemark" width="64" height="64" viewBox="0 0 24 24" fill="rgba(41,37,36,.4)"><path d="M9.5 4A5.5 5.5 0 0 0 4 9.5V19a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1H7a3.5 3.5 0 0 1 3.5-3.5 1 1 0 0 0 0-2zm10 0A5.5 5.5 0 0 0 14 9.5V19a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6a1 1 0 0 0-1-1h-4a3.5 3.5 0 0 1 3.5-3.5 1 1 0 0 0 0-2z"></path></svg>';
 
   // ----- Areas -----
-  document.getElementById('clgAreas').innerHTML = areas.map(function(a){
-    return '<div class="clg-area"><div class="clg-area__l"><span class="clg-area__dot"></span><span class="clg-area__name">'+a+'</span></div>'+
+  var countyInfo = {
+    "Dallas County": {seat:"Dallas", office:"Dallas Main Office", blurb:"Our primary office sits in downtown Dallas, minutes from the courts. We handle injury and probate matters throughout Dallas, Irving, Garland, and Mesquite."},
+    "Tarrant County": {seat:"Fort Worth", office:"Fort Worth Branch", blurb:"Our Fort Worth branch serves all of Tarrant County, with regular appearances at the Tom Vandergriff Civil Courts Building in downtown Fort Worth."},
+    "Collin County": {seat:"McKinney", office:"Dallas Main Office", blurb:"We represent clients across Collin County — McKinney, Plano, Frisco, and Allen — from our nearby Dallas office."},
+    "Denton County": {seat:"Denton", office:"Fort Worth Branch", blurb:"From Denton to Lewisville and Flower Mound, we handle Denton County matters out of our Fort Worth branch."},
+    "Rockwall County": {seat:"Rockwall", office:"Dallas Main Office", blurb:"We serve Rockwall and Rowlett families from our Dallas office, a short drive east on I-30."},
+    "Kaufman County": {seat:"Kaufman", office:"Dallas Main Office", blurb:"Terrell, Forney, and Kaufman clients are represented from our Dallas office."},
+    "Ellis County": {seat:"Waxahachie", office:"Dallas Main Office", blurb:"We appear in the Ellis County courts in Waxahachie and serve Midlothian and Ennis."},
+    "Johnson County": {seat:"Cleburne", office:"Fort Worth Branch", blurb:"Burleson, Cleburne, and Johnson County matters are handled from our Fort Worth branch."},
+    "Parker County": {seat:"Weatherford", office:"Fort Worth Branch", blurb:"We serve Weatherford and all of Parker County from our nearby Fort Worth office."},
+    "Wise County": {seat:"Decatur", office:"Fort Worth Branch", blurb:"Decatur, Bridgeport, and Wise County clients are served from our Fort Worth branch."}
+  };
+  var areasEl = document.getElementById('clgAreas');
+  areasEl.innerHTML = areas.map(function(a){
+    return '<div class="clg-area" role="button" tabindex="0" data-county="'+a+'"><div class="clg-area__l"><span class="clg-area__dot"></span><span class="clg-area__name">'+a+'</span></div>'+
       '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#44403c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"></path></svg></div>';
   }).join('');
+  var areaModal = document.getElementById('clgAreaModal');
+  function openArea(name){
+    var d = countyInfo[name]; if(!d) return;
+    areaModal.querySelector('#clgAreaTitle').textContent = name;
+    areaModal.querySelector('#clgAreaBody').textContent = d.blurb;
+    areaModal.querySelector('#clgAreaRows').innerHTML =
+      '<div class="clg-modal__row"><span class="k">County Seat</span><span class="v">'+d.seat+'</span></div>'+
+      '<div class="clg-modal__row"><span class="k">Nearest Office</span><span class="v">'+d.office+'</span></div>'+
+      '<div class="clg-modal__row"><span class="k">Consultations</span><span class="v">Free &middot; 24/7</span></div>';
+    areaModal.classList.add('open'); areaModal.setAttribute('aria-hidden','false'); document.body.style.overflow='hidden';
+  }
+  function closeArea(){ areaModal.classList.remove('open'); areaModal.setAttribute('aria-hidden','true'); document.body.style.overflow=''; }
+  areasEl.addEventListener('click', function(e){ var c=e.target.closest('.clg-area'); if(c) openArea(c.getAttribute('data-county')); });
+  areasEl.addEventListener('keydown', function(e){ if(e.key==='Enter'||e.key===' '){ var c=e.target.closest('.clg-area'); if(c){ e.preventDefault(); openArea(c.getAttribute('data-county')); } } });
+  areaModal.addEventListener('click', function(e){ if(e.target.hasAttribute('data-close')) closeArea(); });
+  document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeArea(); });
 
   // ----- FAQ -----
   var faqWrap = document.getElementById('clgFaq');
@@ -862,6 +956,32 @@ input::placeholder,textarea::placeholder{color:#57534e;}
     revealEls.forEach(function(el){ el.classList.add('is-visible'); });
   }
 
+  // ----- Stats count-up -----
+  var countEls = Array.prototype.slice.call(document.querySelectorAll('[data-count]'));
+  function runCounts(){
+    countEls.forEach(function(el){
+      if(el.dataset.done==='1') return;
+      var target = parseInt(el.getAttribute('data-count'),10) || 0;
+      var start = performance.now();
+      var dur = 1400;
+      function tick(now){
+        var p = Math.min((now-start)/dur,1);
+        el.textContent = String(Math.round(target * (1 - Math.pow(1-p,3))));
+        if(p<1){ requestAnimationFrame(tick); } else { el.dataset.done='1'; }
+      }
+      requestAnimationFrame(tick);
+    });
+  }
+  var statsSec = document.querySelector('.clg-stats');
+  if(statsSec && 'IntersectionObserver' in window){
+    var cIo = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ runCounts(); cIo.disconnect(); } });
+    }, { threshold:0.3 });
+    cIo.observe(statsSec);
+  } else {
+    runCounts();
+  }
+
   // ----- Hero split entrance -----
   var heroPeople = document.querySelector('.clg-hero__people');
   if(heroPeople){
@@ -897,6 +1017,68 @@ input::placeholder,textarea::placeholder{color:#57534e;}
   }
   window.addEventListener('scroll', onScroll, { passive:true });
   onScroll();
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Callahan & Callahan",
+  "description": "Husband-and-wife trial firm handling personal injury and probate matters across the Dallas-Fort Worth Metroplex.",
+  "url": "https://www.callahanlaw.com/",
+  "telephone": "+1-800-587-8423",
+  "email": "info@callahanlaw.com",
+  "priceRange": "Free consultation; contingency fees available",
+  "areaServed": "Dallas-Fort Worth Metroplex, Texas",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1234 Commerce Street, Suite 500",
+    "addressLocality": "Dallas",
+    "addressRegion": "TX",
+    "postalCode": "75201",
+    "addressCountry": "US"
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "00:00",
+    "closes": "23:59"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Callahan & Callahan",
+  "url": "https://www.callahanlaw.com/"
+}
+</script>
+<script>
+(function(){
+  function animateCount(el){
+    var target=parseFloat(el.getAttribute('data-count'));
+    if(isNaN(target)) return;
+    var dur=1500, start=null;
+    el.textContent='0';
+    function step(ts){
+      if(!start) start=ts;
+      var t=Math.min(1,(ts-start)/dur);
+      var e=1-Math.pow(1-t,3);
+      el.textContent=Math.round(e*target);
+      if(t<1) requestAnimationFrame(step); else el.textContent=String(target);
+    }
+    requestAnimationFrame(step);
+  }
+  var nums=[].slice.call(document.querySelectorAll('[data-count]'));
+  if(!nums.length) return;
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ animateCount(en.target); io.unobserve(en.target); } });
+    },{threshold:0.4});
+    nums.forEach(function(n){ io.observe(n); });
+  } else { nums.forEach(animateCount); }
 })();
 </script>
 </body>
