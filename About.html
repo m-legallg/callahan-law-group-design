@@ -102,14 +102,19 @@ input::placeholder,textarea::placeholder{color:#57534e;}
 .clg-hero__cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;}
 
 /* ===== Stats ===== */
-.clg-stats{position:relative;z-index:30;background:var(--bg2);width:100%;padding:96px 0;box-shadow:0 -20px 40px var(--bg);}
-.clg-stats__col{display:flex;flex-direction:column;width:100%;}
-.clg-stat{width:100%;border-top:1px solid var(--line-soft);}
-.clg-stat:last-child{border-bottom:1px solid var(--line-soft);}
-.clg-stat__inner{max-width:1600px;margin:0 auto;display:flex;justify-content:space-between;align-items:flex-start;padding:64px 48px;gap:24px;}
-.clg-stat__num{font-family:var(--rokkitt);font-weight:800;font-size:clamp(5rem,13vw,15rem);line-height:.75;color:var(--t3);letter-spacing:-.03em;}
-.clg-stat__num span{color:var(--amber-2);font-size:.6em;margin-left:14px;}
-.clg-stat__label{font-size:18px;color:var(--amber-2);text-transform:uppercase;letter-spacing:.3em;font-weight:700;margin-top:36px;text-align:right;}
+.clg-stats{position:relative;z-index:30;background:var(--bg2);width:100%;padding:56px 0;border-top:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);}
+.clg-stats__inner{max-width:1280px;margin:0 auto;padding:0 48px;}
+.clg-stats__head{display:flex;align-items:center;gap:12px;margin-bottom:30px;}
+.clg-stats__kicker{font-family:var(--inter);font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--amber-2);}
+.clg-stats__line{flex:1;height:1px;background:var(--line);}
+.clg-stats__col{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));}
+.clg-stat{padding:0 36px;}
+.clg-stat+.clg-stat{border-left:1px solid var(--line);}
+.clg-stat__num{font-family:var(--rokkitt);font-weight:800;font-size:clamp(3rem,5.7vw,4.4rem);line-height:.85;color:var(--t3);letter-spacing:-.02em;}
+.clg-stat__num span{color:var(--amber-2);}
+.clg-stat__label{font-family:var(--inter);font-size:12px;color:var(--amber-2);text-transform:uppercase;letter-spacing:.2em;font-weight:700;margin-top:14px;}
+.clg-stat__desc{font-size:13px;color:var(--t5);line-height:1.5;margin:10px 0 0;}
+.clg-stats__disclaimer{font-size:12px;color:var(--t6);font-style:italic;margin:24px 0 0;padding-top:16px;border-top:1px solid var(--line);}
 
 /* ===== Split sections ===== */
 .clg-split{position:relative;z-index:30;background:var(--bg3);width:100%;border-top:1px solid var(--bg);overflow:hidden;display:flex;flex-wrap:wrap;align-items:center;}
@@ -325,7 +330,9 @@ input::placeholder,textarea::placeholder{color:#57534e;}
   .clg-burger{display:inline-flex;}
   .clg-wrap,.clg-testi__inner,.clg-areas__inner,.clg-faq__inner,.clg-loc__head,.clg-loc__grid{padding-left:24px;padding-right:24px;}
   .clg-hero__content{padding:120px 24px 48px;}
-  .clg-stat__inner{padding:40px 24px;}
+  .clg-stats{padding:44px 0;}
+  .clg-stats__inner{padding:0 24px;}
+  .clg-stat{padding:0 18px;}
   .clg-split__media{padding:48px 24px;min-height:0;}
   .clg-split__body{padding:32px 24px 56px;}
   .clg-split__media[data-order="2"]{order:-1;}
@@ -336,8 +343,10 @@ input::placeholder,textarea::placeholder{color:#57534e;}
 }
 @media (max-width:560px){
   .clg-util__group .clg-util__item:nth-child(2){display:none;}
-  .clg-stat__inner{flex-direction:column;gap:8px;}
-  .clg-stat__label{text-align:left;margin-top:0;}
+  .clg-stats__head{margin-bottom:18px;}
+  .clg-stats__col{grid-template-columns:1fr;gap:18px;}
+  .clg-stat{padding:0;border-left:none!important;}
+  .clg-stat+.clg-stat{padding-top:18px;border-top:1px solid var(--line);}
   .clg-loc__grid{grid-template-columns:1fr;}
   .clg-card,.clg-loc__grid{min-width:0;}
   .clg-loc__grid{grid-template-columns:minmax(0,1fr);}
@@ -515,10 +524,26 @@ input::placeholder,textarea::placeholder{color:#57534e;}
 
   <!-- Stats -->
   <section class="clg-stats">
-    <div class="clg-stats__col">
-      <div class="clg-stat reveal left"><div class="clg-stat__inner"><div class="clg-stat__num">$250<span>M+</span></div><div class="clg-stat__label">Recovered</div></div></div>
-      <div class="clg-stat reveal left"><div class="clg-stat__inner"><div class="clg-stat__num">98<span>%</span></div><div class="clg-stat__label">Success Rate</div></div></div>
-      <div class="clg-stat reveal left"><div class="clg-stat__inner"><div class="clg-stat__num">25<span>+</span></div><div class="clg-stat__label">Years Together</div></div></div>
+    <div class="clg-stats__inner">
+      <div class="clg-stats__head reveal up"><span class="clg-stats__kicker">By The Numbers</span><span class="clg-stats__line"></span></div>
+      <div class="clg-stats__col">
+        <div class="clg-stat reveal up">
+          <div class="clg-stat__num">$<span data-count="250">250</span><span>M+</span></div>
+          <div class="clg-stat__label">Recovered</div>
+          <p class="clg-stat__desc">Combined client recoveries across injury and probate casework.</p>
+        </div>
+        <div class="clg-stat reveal up">
+          <div class="clg-stat__num"><span data-count="98">98</span><span>%</span></div>
+          <div class="clg-stat__label">Success Rate</div>
+          <p class="clg-stat__desc">Favorable settlements and verdicts secured for families in crisis.</p>
+        </div>
+        <div class="clg-stat reveal up">
+          <div class="clg-stat__num"><span data-count="25">25</span><span>+</span></div>
+          <div class="clg-stat__label">Years Together</div>
+          <p class="clg-stat__desc">Margaret and James trying cases together since 1998.</p>
+        </div>
+      </div>
+      <p class="clg-stats__disclaimer reveal up">Prior results do not guarantee a similar outcome. Figures reflect cumulative firm history.</p>
     </div>
   </section>
 
